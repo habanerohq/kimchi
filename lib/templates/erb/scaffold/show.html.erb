@@ -1,0 +1,9 @@
+<%%= render 'page_header' %>
+<%%= render 'flash' %>
+
+<dl>
+<% attributes.each do |attribute| -%>
+  <dt><%%= <%= class_name %>.human_attribute_name(:<%= attribute.name %>) %></dt>
+  <dd><%%= resource.<%= attribute.name %> %></dd>
+<% end -%>
+</dl>

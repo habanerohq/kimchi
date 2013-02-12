@@ -1,0 +1,8 @@
+<tr>
+<% column_names.each do |column| %>
+  <td><%= resource.send(column.to_sym) %></td>
+<% end %>
+  <td><%= link_to 'Show', resource_path(resource) %></td>
+  <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
+  <td><%= link_to 'Destroy', resource_path(resource), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>

@@ -36,3 +36,16 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+group :assets do
+  gem 'bootstrap-sass'
+  gem 'font-awesome-sass-rails'
+end
+
+gem 'simple_form'
+gem 'super_resources', '1.0.0.rc2'
+gem 'strong_parameters'
+gem 'has_scope'
+gem 'responders'
+gem 'kaminari'
+gem 'draper'

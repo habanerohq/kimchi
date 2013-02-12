@@ -1,0 +1,24 @@
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+    <% column_names.each do |column| %>
+      <th><%= resource_class.human_attribute_name(column.to_sym) %></th>
+    <% end %>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%=
+      render :partial => 'table_row',
+             :collection => collection,
+             :as => :resource,
+             :locals => {
+               :resource_class => resource_class,
+               :column_names => column_names
+             }
+    %>
+  </tbody>
+</table>
