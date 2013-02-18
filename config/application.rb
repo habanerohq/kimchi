@@ -72,6 +72,12 @@ module Kimchi
       generate.helper false
       generate.javascripts false
       generate.stylesheets false
+
+      generate.test_framework :rspec,
+        :fixture => true, :controller_specs => false, :helper_specs => false,
+        :request_specs => false, :routing_specs => false, :view_specs => false
+
+      generate.fixture_replacement :factory_girl, :dir => 'spec/factories'
     end
   end
 end

@@ -42,6 +42,25 @@ group :assets do
   gem 'font-awesome-sass-rails'
 end
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'cucumber-rails', :require => false
+  gem 'factory_girl_rails'
+end
+
+group :test do
+  gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'database_cleaner'
+
+  gem 'spork-rails'
+  gem 'guard-spork'
+  gem 'guard-rspec'
+  gem 'guard-cucumber'
+  gem 'rb-fsevent', :require => false
+  gem 'ruby_gntp'
+end
+
 gem 'simple_form'
 gem 'super_resources', '1.0.0.rc2'
 gem 'strong_parameters'
