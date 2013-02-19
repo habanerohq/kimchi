@@ -1,6 +1,7 @@
 module ApplicationHelper
   def application_name
-    Rails.application.class.parent.name.to_s.demodulize.humanize
+    t('application.name', :default =>
+      Rails.application.class.parent.name.to_s.demodulize.humanize)
   end
 
   def tab_to(*args, &block)
