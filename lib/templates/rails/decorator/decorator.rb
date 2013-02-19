@@ -4,6 +4,7 @@ class <%= class_name %>Decorator < <%= parent_class_name %>
   <%- else -%>
 class <%= class_name %>
   <%- end -%>
+  include Decorators::Resource
   include Decorators::Tabled
 
   delegate_all
