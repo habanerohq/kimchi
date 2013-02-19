@@ -1,5 +1,5 @@
 module Controllers
-  module Resource
+  module Resources
     extend ActiveSupport::Concern
 
     included do
