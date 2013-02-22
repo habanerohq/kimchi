@@ -11,17 +11,4 @@ module ApplicationHelper
 
     content_tag(:li, link_to(*args << options, &block), options)
   end
-
-  def render_table(collection, options={})
-    klass_name =
-      options[:resource_class].to_s.classify.presence ||
-      collection.any? ? collection.first.class :
-      controller.send(:resource_class)
-
-    klass = klass_name.to_s.safe_constantize
-    options.reverse_merge! :resource_class => klass,
-                           :column_names => klass.decorator_class.column_names
-
-    render :partial => 'table', :locals => options.merge(:collection => collection)
-  end
 end
