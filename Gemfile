@@ -40,6 +40,7 @@ gem 'jquery-rails'
 group :assets do
   gem 'bootstrap-sass'
   gem 'font-awesome-sass-rails'
+  gem 'bootstrap-datepicker-rails'
 end
 
 group :development, :test do
