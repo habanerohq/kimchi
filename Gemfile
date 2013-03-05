@@ -43,10 +43,9 @@ group :assets do
   gem 'bootstrap-datepicker-rails'
 end
 
-group :development, :test do
-  gem 'rspec-rails'
-  gem 'cucumber-rails', :require => false
-  gem 'factory_girl_rails'
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :test do
@@ -60,6 +59,12 @@ group :test do
   gem 'guard-cucumber'
   gem 'rb-fsevent', :require => false
   gem 'ruby_gntp'
+end
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'cucumber-rails', :require => false
+  gem 'factory_girl_rails'
 end
 
 gem 'simple_form'
