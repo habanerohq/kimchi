@@ -68,7 +68,7 @@ group :development, :test do
 end
 
 gem 'simple_form'
-gem 'super_resources', '1.0.0.rc2'
+gem 'super_resources', '1.0.0.rc3'
 gem 'strong_parameters'
 gem 'has_scope'
 gem 'responders'
