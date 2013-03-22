@@ -79,5 +79,8 @@ module Kimchi
 
       generate.fixture_replacement :factory_girl, :dir => 'spec/factories'
     end
+
+    # Because including all helpers by default is a ridiculous idea
+    config.action_controller.include_all_helpers = false
   end
 end
