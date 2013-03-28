@@ -1,9 +1,9 @@
 module Controllers
   module Resources
     extend ActiveSupport::Concern
+    include SuperResources::Controller
 
     included do
-      include SuperResources::Controller
       helper :resources
     end
 
