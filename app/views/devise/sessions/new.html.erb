@@ -10,7 +10,13 @@
   <div class="form-inputs">
     <%= f.input :email, :required => false, :autofocus => true %>
     <%= f.input :password, :required => false %>
-    <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
+
+    <% if devise_mapping.rememberable? %>
+      <%= f.input :remember_me,
+                  :as => :boolean,
+                  :label => false,
+                  :inline_label => 'Remember me' %>
+    <% end %>
   </div>
 
   <div class="form-actions">
