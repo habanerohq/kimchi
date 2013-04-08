@@ -68,6 +68,7 @@ module Kimchi
     # Don't generate too much cruft
     config.generators do |generate|
       generate.scaffold_controller = :strong_parameters_controller
+      generate.template_engine = :kimchi
 
       generate.helper false
       generate.javascripts false

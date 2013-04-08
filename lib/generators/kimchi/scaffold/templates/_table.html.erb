@@ -1,0 +1,23 @@
+<table class="table table-striped table-hover">
+  <thead>
+<% attributes.each do |attribute| -%>
+    <th><%%= <%= class_name %>.human_attribute_name(:<%= attribute.name %>) %></th>
+<% end -%>
+    <th></th>
+    <th></th>
+    <th></th>
+  </thead>
+
+  <tbody>
+  <%% collection.each do |resource| %>
+    <tr>
+<% attributes.each do |attribute| -%>
+      <td><%%= resource.<%= attribute.name %> %></td>
+<% end -%>
+      <td><%%= link_to 'Show', resource_path(resource) %></td>
+      <td><%%= link_to 'Edit', edit_resource_path(resource) %></td>
+      <td><%%= link_to 'Destroy', resource_path(resource), <%= key_value :method, ":delete" %>, <%= key_value :data, "{ #{key_value :confirm, "'Are you sure?'"} }" %> %></td>
+    </tr>
+  <%% end %>
+  </tbody>
+</table>

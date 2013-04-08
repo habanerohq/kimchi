@@ -2,7 +2,7 @@
   <h2><%= resource_class.model_name.human.pluralize %></h2>
 </div>
 
-<%= render_table(collection) %>
+<%= render 'table' %>
 <%= paginate(collection) %>
 
 <div class="form-actions">
