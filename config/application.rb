@@ -65,6 +65,9 @@ module Kimchi
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
+    # Don't start the server when precompiling assets
+    config.assets.initialize_on_precompile = false
+
     # Don't generate too much cruft
     config.generators do |generate|
       generate.scaffold_controller = :strong_parameters_controller
