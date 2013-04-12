@@ -16,8 +16,12 @@ module Controllers
       resource_class.default_per_page
     end
 
+    def paginate(collection)
+      collection.page(current_page).per(per_page)
+    end
+
     def collection
-      memoize_collection { super.page(current_page).per(per_page) }
+      memoize_collection { paginate(super) }
     end
   end
 end
