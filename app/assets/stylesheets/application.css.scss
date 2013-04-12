@@ -39,6 +39,7 @@
 
 // Make sure anything nested with the page heading lines up vertically
 // -----------------------------------------------------------------------------
-.page-header > div {
-  line-height: $baseLineHeight * 2;
+.page-header-right {
+  float: right;
+  margin: $baseLineHeight * 0.5 0;
 }
