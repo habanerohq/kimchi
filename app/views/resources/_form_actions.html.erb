@@ -1,4 +1,13 @@
 <div class="form-actions">
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to 'Cancel', collection_path, :class => 'btn' %>
+
+  <% if f.object.persisted? %>
+    <%= link_to resource_path(f.object),
+                :class => 'btn btn-danger pull-right',
+                :method => :delete,
+                :data => { :confirm => 'Are you sure?' } do %>
+      <i class="icon-trash"></i> Delete <%= f.object.class.model_name.human %>
+    <% end %>
+  <% end %>
 </div>
