@@ -1,13 +1,13 @@
 <div class="page-header">
+  <div class="page-header-actions pull-right">
+    <%= link_to new_resource_path, :class => 'btn btn-success' do %>
+      <i class="icon-plus-sign"></i>
+      New <%= resource_class.model_name.human %>
+    <% end %>
+  </div>
+
   <h2><%= resource_class.model_name.human.pluralize %></h2>
 </div>
 
 <%= render 'table' %>
-<%= paginate(collection) %>
-
-<div class="form-actions">
-  <%= link_to new_resource_path, :class => 'btn' do %>
-    <i class="icon-plus-sign"></i>
-    New <%= resource_class.model_name.human %>
-  <% end %>
-</div>
+<%= render 'pagination' %>

@@ -18,7 +18,7 @@
 @import "font-awesome";
 
 // Push content down when the navbar has a fixed position
-// --------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 @media (min-width: 980px) {
   body {
     padding-top: $navbarHeight + $gridGutterWidth;
@@ -26,7 +26,7 @@
 }
 
 // Support the use of nav tabs inside page-header elements
-// --------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 .page-header-tabbed {
   border-bottom: 0;
   margin-bottom: 0;
@@ -35,4 +35,10 @@
   h1, h2 {
     padding-bottom: 17px;
   }
+}
+
+// Make sure anything nested with the page heading lines up vertically
+// -----------------------------------------------------------------------------
+.page-header > div {
+  line-height: $baseLineHeight * 2;
 }
