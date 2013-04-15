@@ -42,4 +42,12 @@
 .page-header-right {
   float: right;
   margin: $baseLineHeight * 0.5 0;
+
+  form {
+    display: inline-block;
+
+    .input-append {
+      margin-bottom: 0;
+    }
+  }
 }

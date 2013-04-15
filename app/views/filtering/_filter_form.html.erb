@@ -1,0 +1,22 @@
+<%= form_tag filter_movies_path, :method => :get, :remote => true do %>
+  <div class="input-append">
+    <%= text_field_tag :filter, '', :id => 'filter', :class => 'input-medium' %>
+    <%= button_tag :type => 'submit', :class => 'btn' do %>
+      <i class="icon-search"></i>
+    <% end %>
+  </div>
+
+  <%= javascript_tag do %>
+    ;(function($, window) {
+      $(function() {
+        $('#filter').typeWatch({
+          callback: function() {
+            $(this).closest('form').submit();
+          },
+          wait: 750,
+          captureLength: 3
+        })
+      });
+    })(jQuery, this);
+  <% end %>
+<% end %>
