@@ -16,3 +16,6 @@
 
 # Ignore local database configuration file
 /config/database.yml
+
+# Ignore system files
+.DS_Store
