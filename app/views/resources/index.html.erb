@@ -1,12 +1,9 @@
 <div class="page-header">
   <div class="page-header-right">
-    <%= link_to new_resource_path, :class => 'btn btn-success' do %>
-      <i class="icon-plus-sign"></i>
-      New <%= resource_class.model_name.human %>
-    <% end %>
+    <%= new_resource_button %>
   </div>
 
-  <h2><%= resource_class.model_name.human.pluralize %></h2>
+  <h2><%= localised_collection_name %></h2>
 </div>
 
 <%= render 'table' %>
