@@ -2,7 +2,7 @@ module ResourcesHelper
   # url helpers ................................................................
 
   def create_or_update_resource_path(object)
-    object.persisted? ? edit_resource_path(object) : collection_path
+    object.persisted? ? resource_path(object) : collection_path
   end
 
   def cancel_path
