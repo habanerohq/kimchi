@@ -5,7 +5,10 @@ gem 'rails', '3.2.12'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
+# Pick your preferred DBMS, see config/database for example configuration files
+# gem 'pg'
+gem 'sqlite3'
+# gem 'mysql2'
 
 
 # Gems used only for assets and not required
@@ -44,8 +47,6 @@ group :assets do
 end
 
 group :development do
-  gem 'sqlite3'
-
   gem 'better_errors'
   gem 'binding_of_caller'
 end
